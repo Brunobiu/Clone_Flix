@@ -11,14 +11,14 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Model_Login")
-@SequenceGenerator(name = "seq_Model_Login", sequenceName = "seq_Model_Login", allocationSize = 1, initialValue = 1)
+@Table(name = "model_login")
+@SequenceGenerator(name = "seq_model_login", sequenceName = "seq_model_login", allocationSize = 1, initialValue = 1)
 public class ModelLogin implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_Model_Login")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_model_login")
 	private Long id;
 	
 	@Column(nullable = false)

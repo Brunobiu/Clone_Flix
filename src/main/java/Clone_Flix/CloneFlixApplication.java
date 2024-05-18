@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EntityScan(basePackages = "Clone_Flix_model")
-@ComponentScan(basePackages = {"Clone.*"})
+@ComponentScan(basePackages = {"Clone_*"})
 @EnableJpaRepositories(basePackages = {"Clone_Flix_repository"})
 @EnableTransactionManagement
 public class CloneFlixApplication {
@@ -19,5 +19,4 @@ public class CloneFlixApplication {
 	}
 
 	
-	// Aula Configurações de performance e teste de CRUD -33:02
 }
