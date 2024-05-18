@@ -30,7 +30,7 @@ public class ModelLogin implements Serializable {
 	@Column(nullable = false)
 	private String senha; // A senha será gerada automaticamente
 	
-	@Column(nullable = false)
+	@Column(unique = true, nullable = false)
 	private String cpf;
 	
 	@Column(nullable = false)
