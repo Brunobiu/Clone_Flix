@@ -1,6 +1,7 @@
 package Clone_Flix_model;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "model_login")
@@ -36,13 +39,16 @@ public class ModelLogin implements Serializable {
 	@Column(nullable = false)
 	private String 	celular;
 	
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		
+		return this.getAuthorities();
+	}
 	
 	
 	/*SET E GET*/
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -87,6 +93,17 @@ public class ModelLogin implements Serializable {
 		this.celular = celular;
 	}
 	
+	@Override
+    public String toString() {
+        return "ModelLogin{" +
+                "id=" + id +
+                ", nomeSobrenome='" + nomeSobrenome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", celular='" + celular + '\'' +
+                '}';
+    }
 	
 	
 	

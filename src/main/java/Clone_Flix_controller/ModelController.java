@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import Clone_Flix.ExceptionMentoriaJava;
 import Clone_Flix_model.ModelLogin;
 import Clone_Flix_repository.ModelRepository;
 import Clone_Flix_service.ModelService;
@@ -30,7 +31,17 @@ public class ModelController {
 	
 	@ResponseBody /*Retorno da api*/
 	@PostMapping(value = "**/salvarModel")
-	public ResponseEntity<ModelLogin> salvarModel(@RequestBody ModelLogin login) {
+	public ResponseEntity<ModelLogin> salvarModel(@RequestBody ModelLogin login) throws ExceptionMentoriaJava {
+		
+		if (login.getId() == null) {
+			
+			List<ModelLogin> logins =  modelRepository.buscarPorModel(login.getNomeSobrenome().toUpperCase());
+			
+			if (!logins.isEmpty()) {
+				
+				throw new ExceptionMentoriaJava("Já existe Acesso com a descrição: " + login.getNomeSobrenome());
+			}
+		}
 		
 		ModelLogin modelSalvo = modelService.save(login);
 		
@@ -62,22 +73,25 @@ public class ModelController {
 	/*Consultar por ID*/
 	@ResponseBody
 	@GetMapping(value = "**/obterModel/{id}")
-	public ResponseEntity<ModelLogin> obterModel(@PathVariable("id") Long id) {
+	public ResponseEntity<ModelLogin> obterModel(@PathVariable("id") Long id) throws ExceptionMentoriaJava {
 		
-		ModelLogin login =  modelRepository.findById(id).get();
+		ModelLogin login =  modelRepository.findById(id).orElse(null);
+		
+		if (login == null) {
+			throw new ExceptionMentoriaJava("Acesso nao encontrado com o codigo" + id);
+		}
 		
 		return new ResponseEntity<ModelLogin>(login, HttpStatus.OK);
 	}
 	
 	
-	/*Consultar por ID*/
+	/* Consultar por ID */
 	@ResponseBody
 	@GetMapping(value = "**/buscarPorModel/{nome}")
 	public ResponseEntity<List<ModelLogin>> buscarPorModel(@PathVariable("nome") String nome) {
-		
-		List<ModelLogin> login =  modelRepository.buscarCadastro(nome);
-				
-		return new ResponseEntity<List<ModelLogin>>(login, HttpStatus.OK);
+	    List<ModelLogin> login = modelRepository.buscarPorModel(nome.toUpperCase());
+	    return new ResponseEntity<>(login, HttpStatus.OK);
 	}
+
 
 }

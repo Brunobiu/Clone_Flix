@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -22,6 +23,7 @@ import Clone_Flix_model.ModelLogin;
 import Clone_Flix_repository.ModelRepository;
 import junit.framework.TestCase;
 
+@Profile("test")
 @SpringBootTest(classes = CloneFlixApplication.class)
 public class CloneFlixApplicationTests extends TestCase{
 	
@@ -44,10 +46,10 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Lucas Henrique1 zz");
+		modelLogin.setNomeSobrenome("Lucas Henrique65161 zz");
 		modelLogin.setSenha("123445678419");
-		modelLogin.setCpf("00000000421200001");
-		modelLogin.setEmail("lucashsdkhj00001@gmail.com");
+		modelLogin.setCpf("000ds0000561666421200001");
+		modelLogin.setEmail("lucashdssdkcsahj00001@gmail.com");
 		modelLogin.setCelular("62994757240");
 		
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -79,10 +81,10 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Bruno Henrique");
+		modelLogin.setNomeSobrenome("Bruno 546Henrique");
 		modelLogin.setSenha("1234456718419");
-		modelLogin.setCpf("7530124138100011");
-		modelLogin.setEmail("bruninho6@gmail.com");
+		modelLogin.setCpf("7530dsd124138654100011");
+		modelLogin.setEmail("brundsdiscascnho6@gmail.com");
 		modelLogin.setCelular("62994757240");
 		
 		modelLogin = modelRepository.save(modelLogin);
@@ -117,10 +119,10 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("BrunoHenrique_ID");
+		modelLogin.setNomeSobrenome("BrunoHe66nrique_ID");
 		modelLogin.setSenha("1234456718419");
-		modelLogin.setCpf("7530124138100011");
-		modelLogin.setEmail("bruninho6@gmail.com");
+		modelLogin.setCpf("753012dsd45644138100011");
+		modelLogin.setEmail("bruncsdssdainho6@gmail.com");
 		modelLogin.setCelular("62994757240");
 		
 		modelLogin = modelRepository.save(modelLogin);
@@ -155,10 +157,10 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Brunocscscscs");
+		modelLogin.setNomeSobrenome("Brun5656ocscscscs");
 		modelLogin.setSenha("123445671218419");
-		modelLogin.setCpf("7530141112124138100011");
-		modelLogin.setEmail("bruninshnnhxzzho6@gmail.com");
+		modelLogin.setCpf("7530141ds18412124138100011");
+		modelLogin.setEmail("bruninsdhcsannhxzzho6@gmail.com");
 		modelLogin.setCelular("62994757240");
 		
 		modelLogin = modelRepository.save(modelLogin);
@@ -195,10 +197,10 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("testeObterList");
+		modelLogin.setNomeSobrenome("tesvssacdvvsteObterList");
 		modelLogin.setSenha("123445671218419");
-		modelLogin.setCpf("111111111111111411");
-		modelLogin.setEmail("testeObterList14@gmail.com");
+		modelLogin.setCpf("11111sd15411111114211411");
+		modelLogin.setEmail("testeObdstcsaegbfrList14@gmail.com");
 		modelLogin.setCelular("62994757240");
 		
 		modelLogin = modelRepository.save(modelLogin);
@@ -231,14 +233,14 @@ public class CloneFlixApplicationTests extends TestCase{
 
 
 	@Test
-	public void testCadastraModel() {
+	public void testCadastraModel() throws ExceptionMentoriaJava {
 		
 	ModelLogin model = new ModelLogin();
 		
 		model.setNomeSobrenome("junior");
 		model.setSenha("123445678419");
-		model.setCpf("654651414424515651");
-		model.setEmail("cdscssdchegfggsddscsd@gmail.com");
+		model.setCpf("6546514sd14424515651");
+		model.setEmail("cdscsssddchegfggsddscsd@gmail.com");
 		model.setCelular("62994757240");
 		
 		/*Validando pra nao ser nulo*/
