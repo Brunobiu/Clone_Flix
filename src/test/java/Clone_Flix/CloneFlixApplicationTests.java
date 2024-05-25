@@ -1,5 +1,6 @@
 package Clone_Flix;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -46,11 +47,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Lucas Henrique65161 zz");
-		modelLogin.setSenha("123445678419");
-		modelLogin.setCpf("000ds0000561666421200001");
-		modelLogin.setEmail("lucashdssdkcsahj00001@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		ObjectMapper objectMapper = new ObjectMapper();
 		
@@ -81,11 +82,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Bruno 546Henrique");
-		modelLogin.setSenha("1234456718419");
-		modelLogin.setCpf("7530dsd124138654100011");
-		modelLogin.setEmail("brundsdiscascnho6@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		modelLogin = modelRepository.save(modelLogin);
 		
@@ -119,11 +120,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("BrunoHe66nrique_ID");
-		modelLogin.setSenha("1234456718419");
-		modelLogin.setCpf("753012dsd45644138100011");
-		modelLogin.setEmail("bruncsdssdainho6@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		modelLogin = modelRepository.save(modelLogin);
 		
@@ -157,11 +158,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Brun5656ocscscscs");
-		modelLogin.setSenha("123445671218419");
-		modelLogin.setCpf("7530141ds18412124138100011");
-		modelLogin.setEmail("bruninsdhcsannhxzzho6@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		modelLogin = modelRepository.save(modelLogin);
 		
@@ -197,11 +198,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("tesvssacdvvsteObterList");
-		modelLogin.setSenha("123445671218419");
-		modelLogin.setCpf("11111sd15411111114211411");
-		modelLogin.setEmail("testeObdstcsaegbfrList14@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+		modelLogin.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		modelLogin = modelRepository.save(modelLogin);
 		
@@ -237,11 +238,11 @@ public class CloneFlixApplicationTests extends TestCase{
 		
 	ModelLogin model = new ModelLogin();
 		
-		model.setNomeSobrenome("junior");
-		model.setSenha("123445678419");
-		model.setCpf("6546514sd14424515651");
-		model.setEmail("cdscsssddchegfggsddscsd@gmail.com");
-		model.setCelular("62994757240");
+	model.setNomeSobrenome("anderson" + Calendar.getInstance().getTimeInMillis());
+	model.setSenha("123456789" + Calendar.getInstance().getTimeInMillis());
+	model.setCpf("987654321" + Calendar.getInstance().getTimeInMillis());
+	model.setEmail("anderson@gmail.com" + Calendar.getInstance().getTimeInMillis());
+	model.setCelular("62994757240" + Calendar.getInstance().getTimeInMillis());
 		
 		/*Validando pra nao ser nulo*/
 		assertEquals(true, model.getId() == null);

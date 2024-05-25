@@ -15,5 +15,6 @@ public interface ModelRepository extends JpaRepository<ModelLogin, Long> {
 
     @Query("select a from ModelLogin a where upper(trim(a.nomeSobrenome)) like %?1%")
     List<ModelLogin> buscarPorModel(String nome);
+
 }
 
