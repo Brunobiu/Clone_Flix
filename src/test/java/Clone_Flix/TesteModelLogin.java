@@ -23,13 +23,13 @@ public class TesteModelLogin extends TestCase{
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		modelLogin.setNomeSobrenome("Leandro12");
-		modelLogin.setSenha("1234567891");
-		modelLogin.setCpf("988944722");
-		modelLogin.setEmail("Leandxso1234aa22@gmail.com");
-		modelLogin.setCelular("62994757240");
+		modelLogin.setNomeSobrenome("Leandro12324114");
+		modelLogin.setSenha("99999999814");
+		modelLogin.setCpf("9889447223551198412");
+		modelLogin.setEmail("bruno.uol.conatasz14ca224242sc@gmail.com");
+		modelLogin.setCelular("62994757244041");
 		
 		modelControler.salvarPessoa(modelLogin);
 		
-	}
+	}	
 }
